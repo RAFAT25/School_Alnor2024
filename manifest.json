@@ -1,0 +1,15 @@
+{
+  "short_name": "مدرسه النور ",
+  "name": " ALL NOR SCHOOL",
+  "icons": [
+    {
+      "src": "//SCHOOL ALL NOOR/_18c746ca-432c-41ac-956a-04f823c01dfe.jpeg",
+      "sizes": "192x192",
+      "type": "jpeg"
+    }
+  ],
+  "start_url": "/SCHOOL ALL NOOR/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000"
+}
