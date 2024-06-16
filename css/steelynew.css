@@ -76,7 +76,7 @@ border-radius: 15px;
   width: 38px;
 }
 .contenet{
-  background-image: url("img/background.png");
+  background-image: url('img/background.png');
   top: 0px;
   width: auto;
   display: grid;
