@@ -1,0 +1,927 @@
+@import '@splidejs/splide/css';
+@import '@splidejs/splide/css/skyblue';
+@import '@splidejs/splide/css/sea-green';
+@import '@splidejs/splide/css/core';
+body{
+  background: #FFFFFF;
+  margin: 0px;
+  padding: 0px;
+  
+} 
+* {
+  box-sizing: border-box;
+}
+
+
+.transparentpage{
+  height: 500px;
+  width: auto;
+}
+.sticky{
+  position: relative;
+  height: auto;
+  
+  
+}
+.search-box {
+  margin: 20px;
+  text-align: center;
+}
+::placeholder{
+  color: #F1F3FC;
+}
+.search-box input[type="text"] {
+  width: 50%;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #FFC374;
+  border-radius: 5px;
+ background-color: #333a73;
+  caret-color: #FFC374;
+  color: #FFC374;
+  text-align: center;
+}
+.AlertMessages{
+  position: absolute;
+  width: 350px;
+  height: 300px;
+  border-radius: 15px;
+  background: #E5E7EA;
+  border: 1px solid #083073;
+  top: 15rem;
+  left: 20px;
+  transition: all 0.8s;
+  display: none;
+}
+.search-box input:focus{
+  border: 1px solid #083073;
+}
+.AlertMessages .iconclose{
+  width: 350px;
+  height: 50px;
+border-radius: 15px;
+
+  position: relative;
+}
+.AlertMessages .iconclose div{
+  float: right;
+  width: 50px;
+  height: 50px;
+  background: #C50E0E;
+  border-bottom-left-radius:10px;
+  border-top-right-radius:10px;
+  text-align: center;
+}
+.AlertMessages .iconclose img{
+  width: 38px;
+}
+.contenet{
+  background-image: url("../img/default_home_page_img.jpg");
+  top: 0px;
+  width: auto;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 100px 1fr;
+ 
+
+background-size: cover;
+background-position: center;
+ 
+
+padding-bottom: 20px;
+border-bottom-left-radius: 15px;
+border-bottom-right-radius: 20px;
+z-index: 1;
+  
+}
+
+.massage h3{
+  
+  display: block;
+}
+.card
+{
+  width: auto;
+  margin: 0px;
+  height: 600px;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto;
+  padding: 15px;
+  gap: 20px;
+
+  border-radius: 10px;
+  
+  
+}
+.card2
+{
+  width: auto;
+  border-radius: 15px;
+  height: 800px;
+  display: grid;
+  grid-template-columns: auto auto ;
+  grid-template-rows: auto auto auto;
+  padding: 20px;
+  gap: 20px;
+  text-align: center;
+  
+  
+}
+
+.button {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  background: none;
+  color: #0F1923;
+  cursor: pointer;
+  position: relative;
+  padding: 5px;
+ margin: 20px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  transition: all .15s ease;
+  all: unset;
+}
+
+.button::before,
+.button::after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 0;
+  left: 0;
+  height: calc(50% - 5px);
+  border: 1px solid #7D8082;
+  transition: all .15s ease;
+}
+
+.button::before {
+  top: 0;
+  border-bottom-width: 0;
+}
+
+.button::after {
+  bottom: 0;
+  border-top-width: 0;
+}
+
+.button:active,
+.button:focus {
+  outline: none;
+}
+
+.button:active::before,
+.button:active::after {
+  right: 3px;
+  left: 3px;
+}
+
+.button:active::before {
+  top: 3px;
+}
+
+.button:active::after {
+  bottom: 3px;
+}
+
+.button_lg {
+  position: relative;
+  display: block;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #2672BF;
+  overflow: hidden;
+  box-shadow: inset 0px 0px 0px 1px transparent;
+}
+
+.button_lg::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 2px;
+  background-color: #0F1923;
+}
+
+.button_lg::after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 4px;
+  height: 4px;
+  background-color: #0F1923;
+  transition: all .2s ease;
+}
+
+.button_sl {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: -1px;
+  left: -8px;
+  width: 0;
+  background-color: #FF4655;
+  transform: skew(-15deg);
+  transition: all .2s ease;
+}
+
+.button_text {
+  position: relative;
+}
+
+.button:hover {
+  color: #0f1923;
+}
+
+.button:hover .button_sl {
+  width: calc(100% + 15px);
+}
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  z-index: 10px;
+}
+
+.button:hover .button_lg::after {
+  background-color: #fff;
+}
+
+.cardbook, .cardbook2, .cardbook3,.cardbook4, .cardbook5, .cardbook6{
+  border-radius: 15px;
+  display: grid;
+  text-align: center;
+  grid-template-rows: 100px auto;
+  grid-template-columns: auto;
+height: auto;
+background: #FFC374;
+  
+  
+}
+.title{
+  text-align: center;
+  font-weight: 900;
+  font-size: 25px;
+  color: #FFC374;
+  
+}
+
+#title img{
+  width: 40px;
+}
+#school{
+  font-size: 30px;
+  
+  color: #FFC374;
+
+  
+  
+}
+.linkenav a{
+  text-decoration: none;
+  color: #F1F3FC;
+  font-size: 15px;
+  font-weight: 900;
+   }
+.quit{
+  
+  text-align: center;
+  font-size: 18px;
+  font-weight: 100px;
+  margin: 0px;
+  color: #FAFEFF;
+}
+.cardicon{
+  border-radius: 15px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+
+}
+
+
+.card img,.card2 img{
+  width: 80px;
+  text-align: center;
+  margin-top: 5px;
+}
+.card a,h3,.card2 a,h3{
+  text-decoration: none;
+  font-size: 14px;
+  color: #272343;
+  transition: all 0.8s;
+  
+  
+  
+}
+.class7{
+  height: 1000px;
+  grid-template-rows: auto auto auto auto;
+}
+
+.cardtext{
+  color: #333a73;
+   background: #FAFEFF;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.11);
+  border-bottom-right-radius: 15px;
+border-bottom-left-radius: 15px;
+display: grid;
+}
+
+
+.panel-heading a{
+  float: right;
+}
+.cardtext h3 a{
+  text-decoration: none;
+  color: #272343;
+  font-weight: 900px;
+}
+.cardtext h3{
+  color: #272343;
+}
+footer{
+  position: relative;
+ height: auto;
+
+ padding: 20px;
+ background-image: url("../img/default_home_page_img.jpg");
+/* border-image: fill 0 linear-gradient(#0003,#453F78);*/
+background-size: cover;
+background-position: center;
+  border-bottom-left-radius: 15px;
+border-bottom-right-radius: 15px;
+
+ 
+ 
+}
+.login{
+ position: absolute;
+ top:10rem;
+ width: auto;
+ text-align: center;
+}
+.login img{
+  width: 400px;
+  
+  
+}
+footer h4,h3{
+  text-align: center;
+  color: #FFFFFF;
+  
+}
+.cardclass{
+  width: auto;
+  border-radius: 15px;
+  height: auto;
+  display: grid;
+  
+  grid-template-columns: auto;
+  grid-template-rows: repeat(12, 80px); 
+  gap: 20px;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.cardclass a{
+  text-decoration: none;
+  color: #F1F3FC;
+  
+}
+.cardclass a:hover{
+  color: white;
+}
+.classone{
+  background: #FFC374;
+  border-radius: 15px;
+ padding: 3px;;
+ padding-left: 8px;
+ transition: all 0.8s;
+ border-left: 8px solid #333a73;
+ color: white;
+}
+.nameclass{
+  float: right;
+  color: #15293c
+}
+.nameclass h4 a,h4{
+  color:white;
+  
+}
+.numberclass span{
+  float: left;
+}
+.numberclass span{
+  background: #20c997;
+  padding: 8px;
+  border-radius: 80%;
+  color: white;
+}
+.iconNex{
+  position: fixed;
+  position: absolute;
+  top: 85rem;
+  right: 15px;
+  
+  
+}
+.iconNex img{
+  width: 60px;
+}
+.AlertMessages{
+  display: none;
+}
+
+
+.hallo{
+  font-weight: 900rem;
+  font-size: 35px;
+  color: #F1F3FC;
+  float: left;}
+  .modal{
+   z-index: 10;
+  
+
+}
+.iconmanue{
+  float: right;
+  text-align: center;
+  
+}
+.iconmanue img{
+  width: 50px;
+}
+p{
+  
+  color: #FFFFFF;
+  font-weight: 900;
+  justify-content: start;
+}
+.iconmn{
+  
+  justify-content: end;
+  display: flex;
+}
+
+.messageicon img{
+  width: 200px;
+  float: left;
+  padding-top: 8px;
+}
+
+.text{
+  width: auto;
+  display: block;
+  justify-content: center;
+  text-align: center;
+color: #FAFEFF;
+margin: 10px;
+  
+}
+
+text p{
+  display: block;
+  color: #5B4046;
+}
+.massage h3 img{
+  width: 40px;
+}
+.messageicon button{
+  
+  text-align: center;
+  background: none;
+  border: none;
+}
+.messageicon  button img{ width: 40px;
+  margin-top: 20px;
+}
+.messageicon  h3 img{
+  width: 110px;
+margin-top: -30px;
+}
+#summaries{
+  height: 200px;
+  margin-top: 50px;
+  text-align: center;
+}
+#summaries .nameclass h4 {
+  float: center;
+}
+
+.Btn {
+  width: auto;
+  height: 50px;
+  border: none;
+  border-radius: 3%;
+ margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  transition-duration: .3s;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.11);
+  
+
+}
+
+.svgIcon {
+  color: #253F56;
+}
+
+.icon2 {
+  width: 18px;
+  height: 5px;
+  border-bottom: 2px solid #253F56;
+  border-left: 2px solid #253F56;
+  border-right: 2px solid #253F56;
+}
+
+.tooltip {
+  position: absolute;
+  top: -30px;
+  opacity: 0;
+  background-color: rgb(12, 12, 12);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: .2s;
+  pointer-events: none;
+  letter-spacing: 0.2px;
+  
+}
+
+
+.tooltip::before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: rgba(12, 12, 12, 1);
+  background-size: 1000%;
+  background-position: center;
+  transform: rotate(45deg);
+  bottom: -5%;
+  transition-duration: .3s;
+}
+
+.Btn:hover .tooltip {
+  opacity: 1;
+  transition-duration: .3s;
+}
+
+.Btn:hover {
+  background-color: #4FB391;
+  transition-duration: .3s;
+}
+
+.Btn:hover .icon2 {
+  border-bottom: 2px solid rgb(235, 235, 235);
+  border-left: 2px solid rgb(235, 235, 235);
+  border-right: 2px solid rgb(235, 235, 235);
+}
+
+.Btn:hover .svgIcon {
+  fill: rgb(255, 255, 255);
+  animation: slide-in-top 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+
+.scale-up-hor-center {
+	-webkit-animation: scale-up-hor-center 0.20s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: scale-up-hor-center 0.20s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+
+@-webkit-keyframes scale-up-hor-center {
+  0% {
+    -webkit-transform: scaleX(0.4);
+            transform: scaleX(0.4);
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+@keyframes scale-up-hor-center {
+  0% {
+    -webkit-transform: scaleX(0.4);
+            transform: scaleX(0.4);
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+.text-pop-up-top {
+	-webkit-animation: text-pop-up-top 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: text-pop-up-top 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+/* ----------------------------------------------
+ * Generated by Animista on 2024-4-7 3:24:14
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation text-pop-up-top
+ * ----------------------------------------
+ */
+@-webkit-keyframes text-pop-up-top {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    text-shadow: none;
+  }
+  100% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
+  }
+}
+@keyframes text-pop-up-top {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    text-shadow: none;
+  }
+  100% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.scale-in-ver-top {
+	-webkit-animation: scale-in-ver-top 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: scale-in-ver-top 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        
+}
+
+
+@-webkit-keyframes scale-in-ver-top {
+  0% {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+    -webkit-transform-origin: 100% 0%;
+            transform-origin: 100% 0%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+    -webkit-transform-origin: 100% 0%;
+            transform-origin: 100% 0%;
+    opacity: 1;
+  }
+}
+@keyframes scale-in-ver-top {
+  0% {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+    -webkit-transform-origin: 100% 0%;
+            transform-origin: 100% 0%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+    -webkit-transform-origin: 100% 0%;
+            transform-origin: 100% 0%;
+    opacity: 1;
+  }
+}
+.slide-in-bck-center {
+	-webkit-animation: slide-in-bck-center 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-bck-center 0..9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+/* ----------------------------------------------
+ * Generated by Animista on 2024-4-7 5:58:32
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation slide-in-bck-center
+ * ----------------------------------------
+ */
+@-webkit-keyframes slide-in-bck-center {
+  0% {
+    -webkit-transform: translateZ(600px);
+            transform: translateZ(600px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-bck-center {
+  0% {
+    -webkit-transform: translateZ(600px);
+            transform: translateZ(600px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
+  }
+}
+.accordion{
+  display: grid;
+  
+}
+
+
+
+.scale-in-br {
+	-webkit-animation: scale-in-br 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: scale-in-br 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+/* ----------------------------------------------
+ * Generated by Animista on 2024-4-11 8:52:46
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation scale-in-br
+ * ----------------------------------------
+ */
+@-webkit-keyframes scale-in-br {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+    opacity: 1;
+  }
+}
+@keyframes scale-in-br {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+    opacity: 1;
+  }
+}
+.scale-out-top {
+	-webkit-animation: scale-out-top 10.0s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: scale-out-top 10.0s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+/* ----------------------------------------------
+ * Generated by Animista on 2024-4-14 2:51:39
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation scale-out-top
+ * ----------------------------------------
+ */
+@-webkit-keyframes scale-out-top {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 50% 0%;
+            transform-origin: 50% 0%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: 50% 0%;
+            transform-origin: 50% 0%;
+    opacity: 1;
+  }
+}
+@keyframes scale-out-top {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 50% 0%;
+            transform-origin: 50% 0%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: 50% 0%;
+            transform-origin: 50% 0%;
+    opacity: 1;
+  }
+}
+/* ----------------------------------------------
+ *استخدام الشرائح سيتغير الحجم والعرض والارتفاع  splide
+ * ---------------------------------------------- */
+.swiper {
+  width: 100px;
+  height: 300px;
+ 
+
+}
+.splide ul li{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0F1923;
+  
+}
+.swiper-button-prev,.swiper-button-next,.swiper-pagination{
+  color: #20c997;
+}
+.splide__slide img {
+  width: 50%;
+  height: auto;
+
+}
+.thumbnails {
+  display: flex;
+  margin: 1rem auto 0;
+  padding: 0;
+  justify-content: center;
+}
+
+
+.thumbnail {
+  width: 70px;
+  height: 70px;
+  overflow: hidden;
+  list-style: none;
+  margin: 0 0.2rem;
+  cursor: pointer;
+}
+
+
+.thumbnail img {
+  width: 100%;
+  height: auto;
+}
+
