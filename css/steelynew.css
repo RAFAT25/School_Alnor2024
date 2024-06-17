@@ -5,9 +5,7 @@ body{
   padding: 0px;
   
 } 
-body {
-    background-image: url('../img/3363752.png');
-}
+
 * {
   box-sizing: border-box;
 }
@@ -76,7 +74,7 @@ border-radius: 15px;
   width: 38px;
 }
 .contenet{
-  background-image: url("../img/background.png")
+  background-image: url('../img/background.png');
   top: 0px;
   width: auto;
   display: grid;
