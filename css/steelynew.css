@@ -351,9 +351,9 @@ display: grid;
 footer{
   position: relative;
  height: auto;
-
+background-image: url('../img/background.png');
  padding: 20px;
- background-image: url("../img/default_home_page_img.jpg");
+ 
 /* border-image: fill 0 linear-gradient(#0003,#453F78);*/
 background-size: cover;
 background-position: center;
