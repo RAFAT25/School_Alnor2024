@@ -28,14 +28,13 @@
                 <h3 class="iconmanue" style="margin-top: 30px;"> <a href="#"><img src="../img/icons8-message-48.png" alt="أيقونة الرسائل" style="width: 42px; margin-right: 10px;"></a></h3>
         </div>
         </div>
-        <div style="width: auto; display: flex; justify-content: center; gap: 20px; " class="linkenav">
+        <div style="width: auto; display: flex; justify-content: center; gap: 20px;" class="linkenav">
           <a href="../index.html">الصفحة الرئيسية</a>
           <a href="">//</a>
-          <a href="videosummaries.html"style="color: #FFC374;">  قسم  الفديوهات التعليمية</a>
-        
+          <a href="videosummaries.html"style="color: #FFC374;">قسم الفديوهات التعليمية</a>
         </div>
       </div>
-    <div class="container"  style="display: block;">
+    <div class="container" style="display: block;">
         <h3 class="mb-4" style="color: #FFC374;">المواد الدراسية</h3>
         <div id="subjects" class="list-group">
             <a href="#" class="list-group-item list-group-item-action" data-toggle="collapse" data-target="#mathUnits" style="background-color: #FFC374;">الرياضيات</a>
@@ -80,10 +79,7 @@
 
         <div id="lessonContainer" class="mt-4 lesson-video">
             <h3 id="lessonTitle"></h3>
-            <video id="lessonVideo" controls class="w-100">
-                <source id="videoSource" src="" type="video/mp4">
-                المتصفح الخاص بك لا يدعم عرض الفيديو.
-            </video>
+            <iframe id="lessonIframe" class="w-100" height="500" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </div>
 
@@ -91,14 +87,14 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
     <script>
         const lessons = {
-            'math1-1': { title: 'الدرس الأول - الوحدة الأولى - الرياضيات', video: 'https://youtu.be/mR1TcSrNZic?si=CBA4iPXQx8qM68pz' },
-            'math1-2': { title: 'الدرس الثاني - الوحدة الأولى - الرياضيات', video: 'path_to_math1-2_video.mp4' },
-            'math2-1': { title: 'الدرس الأول - الوحدة الثانية - الرياضيات', video: 'path_to_math2-1_video.mp4' },
-            'math2-2': { title: 'الدرس الثاني - الوحدة الثانية - الرياضيات', video: 'path_to_math2-2_video.mp4' },
-            'physics1-1': { title: 'الدرس الأول - الوحدة الأولى - الفيزياء', video: 'path_to_physics1-1_video.mp4' },
-            'physics1-2': { title: 'الدرس الثاني - الوحدة الأولى - الفيزياء', video: 'path_to_physics1-2_video.mp4' },
-            'physics2-1': { title: 'الدرس الأول - الوحدة الثانية - الفيزياء', video: 'path_to_physics2-1_video.mp4' },
-            'physics2-2': { title: 'الدرس الثاني - الوحدة الثانية - الفيزياء', video: 'path_to_physics2-2_video.mp4' },
+            'math1-1': { title: 'الدرس الأول - الوحدة الأولى - الرياضيات', video: 'https://www.youtube.com/embed/mR1TcSrNZic?si=CBA4iPXQx8qM68pz' },
+            'math1-2': { title: 'الدرس الثاني - الوحدة الأولى - الرياضيات', video: 'https://www.youtube.com/embed/path_to_math1-2_video' },
+            'math2-1': { title: 'الدرس الأول - الوحدة الثانية - الرياضيات', video: 'https://www.youtube.com/embed/path_to_math2-1_video' },
+            'math2-2': { title: 'الدرس الثاني - الوحدة الثانية - الرياضيات', video: 'https://www.youtube.com/embed/path_to_math2-2_video' },
+            'physics1-1': { title: 'الدرس الأول - الوحدة الأولى - الفيزياء', video: 'https://www.youtube.com/embed/path_to_physics1-1_video' },
+            'physics1-2': { title: 'الدرس الثاني - الوحدة الأولى - الفيزياء', video: 'https://www.youtube.com/embed/path_to_physics1-2_video' },
+            'physics2-1': { title: 'الدرس الأول - الوحدة الثانية - الفيزياء', video: 'https://www.youtube.com/embed/path_to_physics2-1_video' },
+            'physics2-2': { title: 'الدرس الثاني - الوحدة الثانية - الفيزياء', video: 'https://www.youtube.com/embed/path_to_physics2-2_video' },
         };
 
         $(document).on('click', '.lesson-link', function (e) {
@@ -106,8 +102,7 @@
             const lessonKey = $(this).data('lesson');
             const lesson = lessons[lessonKey];
             $('#lessonTitle').text(lesson.title);
-            $('#videoSource').attr('src', lesson.video);
-            $('#lessonVideo').get(0).load();
+            $('#lessonIframe').attr('src', lesson.video);
             $('#lessonContainer').show();
         });
     </script>
