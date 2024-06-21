@@ -13,7 +13,7 @@ body{
  #alertMessage {
             display: none;
             position: fixed;
-            top: 50%;
+            top: 10%;
             left: 50%;
             transform: translate(-50%, -50%);
             padding: 20px;
@@ -62,18 +62,7 @@ body{
   color: #FFC374;
   text-align: center;
 }
-.AlertMessages{
-  position: absolute;
-  width: 350px;
-  height: 300px;
-  border-radius: 15px;
-  background: #E5E7EA;
-  border: 1px solid #083073;
-  top: 15rem;
-  left: 20px;
-  transition: all 0.8s;
-  display: none;
-}
+
 .search-box input:focus{
   border: 1px solid #083073;
 }
