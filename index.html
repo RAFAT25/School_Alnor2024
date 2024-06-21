@@ -19,10 +19,9 @@
 
   <div class="AlertMessages" id="alertMessage">
 
-<p>هذه رسالة تنبيه!</p>
-    <button class="closeBtn">إغلاق</button>
-</div>
-
+       <p>هذه رسالة تنبيه!</p>
+   <span class="closeIcon">&times;</span>
+  </div>
 
 <div class="contenet" style="background-image: url('img/background.png')">
   <div class="messageicon" id="messageicon">
@@ -99,11 +98,16 @@
 <script>
     document.getElementById('alertLink').addEventListener('click', function(event) {
         event.preventDefault();
-        document.getElementById('alertMessage').style.display = 'block';
+        const alertMessage = document.getElementById('alertMessage');
+        alertMessage.classList.add('show');
     });
 
-    document.querySelector('.closeBtn').addEventListener('click', function() {
-        document.getElementById('alertMessage').style.display = 'none';
+    document.querySelector('.closeIcon').addEventListener('click', function() {
+        const alertMessage = document.getElementById('alertMessage');
+        alertMessage.classList.remove('show');
+        setTimeout(() => {
+            alertMessage.style.display = 'none';
+        }, 500); // تزامن مع مدة الـ transition
     });
 </script>
 </body>
