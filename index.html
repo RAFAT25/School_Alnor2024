@@ -28,9 +28,12 @@
         <h3> <img src="img/1715210863792.png" alt=""></h3>
         <div class="massage" id="massage">
           
-          <h3 class="iconmanue" style="margin-top: 30px;"> <a href="#" ><img src="img/icons8-message-48.png" alt="أيقونة الرسائل" style="width: 40px; margin-right: 10px; "></a></h3>
+          <h3 class="iconmanue" style="margin-top: 30px;"> <a href="#" id="alertLink"><img src="img/icons8-message-48.png" alt="أيقونة الرسائل" style="width: 40px; margin-right: 10px; "></a></h3>
   </div>
   </div>
+      <p>هذه رسالة تنبيه!</p>
+    <button class="closeBtn">إغلاق</button>
+</div>
   <div class="text">
     <p> <p id="school" class="">موقع مدرسة النور التعليمية </p> منصة تعليمية متكاملة تقدم للطلاب خدمات تعليمية متنوعة. يوفر الموقع جدول الحصص والكتب المدرسية وجدول الاختبارات وجدول الإذاعات وملخصات ونماذج اختبارات للصف الثالث الثانوي والصف التاسع وأيضا فيديوهات تعليمية. بالإضافة إلى ذلك، يقدم الموقع موارد تعليمية لتعزيز مهارات الطلاب في اللغة الإنجليزية والرياضيات، وتقديم الدعم الأكاديمي اللازم
 </div>
@@ -94,7 +97,16 @@
 </footer>
 <!-- تم  مكتبه splie  -->
 
+<script>
+    document.getElementById('alertLink').addEventListener('click', function(event) {
+        event.preventDefault();
+        document.getElementById('alertMessage').style.display = 'block';
+    });
 
+    document.querySelector('.closeBtn').addEventListener('click', function() {
+        document.getElementById('alertMessage').style.display = 'none';
+    });
+</script>
 </body>
 
 </html>
