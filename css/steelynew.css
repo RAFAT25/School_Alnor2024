@@ -25,14 +25,20 @@ body{
         }
 
         /* تنسيق زر الإغلاق */
-        .closeBtn {
-            background-color: #721c24;
-            color: white;
-            border: none;
-            padding: 5px 10px;
-            margin-top: 10px;
+        .closeIcon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
             cursor: pointer;
-            border-radius: 3px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #721c24;
+        }
+
+        /* عند عرض الرسالة */
+        #alertMessage.show {
+            display: block;
+            opacity: 1;
 	}
 .transparentpage{
   height: 500px;
