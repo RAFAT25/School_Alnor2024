@@ -63,7 +63,7 @@ border-radius: 15px;
   width: 38px;
 }
 .contenet{
-  background-image: url('../img/background.png');
+  background-image: url('../img/Backgroundyemen.jpg');
   top: 0px;
   width: auto;
   display: grid;
@@ -340,7 +340,7 @@ display: grid;
 footer{
   position: relative;
  height: auto;
-background-image: url('../img/background.png');
+background-image: url('../img/Backgroundyemen.jpg');
  padding: 20px;
  
 /* border-image: fill 0 linear-gradient(#0003,#453F78);*/
