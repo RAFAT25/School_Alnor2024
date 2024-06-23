@@ -60,7 +60,7 @@
 <body>
 <div id="alertMessage">
   <span class="closeIcon">&times;</span>
-  <div id="messagesContainer"></div>
+  
 </div>
 
 <div class="contenet" style="background-image: url('img/background.png')">
@@ -137,29 +137,6 @@
   <code><h3>DESIGN: RAFAT-SOFT</h3></code>
 </footer>
 <script>
-  function loadMessages() {
-    const messagesContainer = document.getElementById('messagesContainer');
-    messagesContainer.innerHTML = '';
-
-    let messages = JSON.parse(localStorage.getItem('messages')) || [];
-    messages.forEach((message, index) => {
-      const messageDiv = document.createElement('div');
-      messageDiv.classList.add('alertMessage');
-      messageDiv.innerHTML = `
-        <span class="closeIcon" onclick="deleteMessage(${index})">&times;</span>
-        <p>${message}</p>
-      `;
-      messagesContainer.appendChild(messageDiv);
-    });
-  }
-
-  function deleteMessage(index) {
-    let messages = JSON.parse(localStorage.getItem('messages')) || [];
-    messages.splice(index, 1);
-    localStorage.setItem('messages', JSON.stringify(messages));
-    loadMessages();
-  }
-
   document.getElementById('alertLink').addEventListener('click', function(event) {
     event.preventDefault();
     const alertMessage = document.getElementById('alertMessage');
@@ -172,8 +149,7 @@
     alertMessage.classList.remove('show');
   });
 
-  // Load messages on initial load
-  window.onload = loadMessages;
+
 </script>
 </body>
 </html>
