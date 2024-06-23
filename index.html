@@ -14,131 +14,166 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/css/splide.min.css">
   <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/js/splide.min.js"></script>
   <style>
-            #alertMessage {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            padding: 20px;
-            background-color: #f8d7da;
-            color: #721c24;
-            border: 1px solid #f5c6cb;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.5s ease, visibility 0.5s ease;
-        }
+    #alertMessage {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 20px;
+      background-color: #f8d7da;
+      color: #721c24;
+      border: 1px solid #f5c6cb;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.5s ease, visibility 0.5s ease;
+      z-index: 1000; /* Ensures the alert is on top of other elements */
+    }
 
-        /* تنسيق أيقونة الإغلاق */
-        .closeIcon {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            cursor: pointer;
-            font-size: 18px;
-            font-weight: bold;
-            color: #721c24;
-        }
+    .closeIcon {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: bold;
+      color: #721c24;
+    }
 
-        /* عند عرض الرسالة */
-        #alertMessage.show {
-            opacity: 1;
-            visibility: visible;
-        }
+    #alertMessage.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .alertMessage {
+      margin: 10px 0;
+      padding: 10px;
+      background-color: #f8d7da;
+      color: #721c24;
+      border: 1px solid #f5c6cb;
+      border-radius: 5px;
+      position: relative;
+    }
   </style>
 </head>
 <body>
 <div id="alertMessage">
-    <span class="closeIcon">&times;</span>
-    <p>هذه رسالة تنبيه!</p>
+  <span class="closeIcon">&times;</span>
+  <div id="messagesContainer"></div>
 </div>
 
-  <div class="contenet" style="background-image: url('img/background.png')">
-    <div class="messageicon" id="messageicon">
-      <h3><img src="img/1715210863792.png" alt=""></h3>
-      <div class="massage" id="massage">
-        <h3 class="iconmanue" style="margin-top: 30px;">
-          <a href="#" id="alertLink">
-            <img src="img/icons8-message-48.png" alt="أيقونة الرسائل" style="width: 40px; margin-right: 10px;" >
-          </a>
-        </h3>
-      </div>
-    </div>
-    
-    <div class="text">
-      <p id="school" class="">موقع مدرسة النور التعليمية</p> 
-      منصة تعليمية متكاملة تقدم للطلاب خدمات تعليمية متنوعة. يوفر الموقع جدول الحصص والكتب المدرسية وجدول الاختبارات وجدول الإذاعات وملخصات ونماذج اختبارات للصف الثالث الثانوي والصف التاسع وأيضا فيديوهات تعليمية. بالإضافة إلى ذلك، يقدم الموقع موارد تعليمية لتعزيز مهارات الطلاب في اللغة الإنجليزية والرياضيات، وتقديم الدعم الأكاديمي اللازم
+<div class="contenet" style="background-image: url('img/background.png')">
+  <div class="messageicon" id="messageicon">
+    <h3><img src="img/1715210863792.png" alt=""></h3>
+    <div class="massage" id="massage">
+      <h3 class="iconmanue" style="margin-top: 30px;">
+        <a href="#" id="alertLink">
+          <img src="img/icons8-message-48.png" alt="أيقونة الرسائل" style="width: 40px; margin-right: 10px;">
+        </a>
+      </h3>
     </div>
   </div>
-  <div class="scale-in-br">
-    <div class="card">
-      <div class="cardbook scale-up-hor-center">
-        <div class="cardicon">
-          <a href="html/classschedule.html"><img src="img/Asset 5@4x.png" alt="" style="width: 60px;"></a>
-        </div>
-        <div class="cardtext">
-          <h3 style="font-weight: 900;"><a href="html/classschedule.html">جدول الحصص</a></h3>
-        </div>
-      </div>
-      <div class="cardbook2 scale-up-hor-center">
-        <div class="cardicon">
-          <a href="html/pagebook.html"><img src="img/Asset 6@4x.png" alt=""></a>
-        </div>
-        <div class="cardtext">
-          <h3 style="font-weight: 900;"><a href="html/pagebook.html">الكتب المدرسية</a></h3>
-        </div>
-      </div>
-      <div class="cardbook3 scale-up-hor-center">
-        <div class="cardicon">
-          <a href=""><img src="img/Asset 8@4x.png" alt="/SCHOOL ALL NOOR/1775653.png" style="width: 60px;"></a>
-        </div>
-        <div class="cardtext">
-          <h3 style="font-weight: 900;"><a href="#">جدول الاختبارات</a></h3>
-        </div>
-      </div>
-      <div class="cardbook4 scale-up-hor-center">
-        <div class="cardicon">
-          <a href="html/summaries.html"><img src="img/Asset 4@4x.png" alt="/SCHOOL ALL NOOR/data-modelling.png" style="width: 80px; margin-left: 5%;"></a>
-        </div>
-        <div class="cardtext">
-          <h3 style="font-weight: 900;"><a href="html/summaries.html">نماذج وملخصات</a></h3>
-        </div>
-      </div>
-      <div class="cardbook5 scale-up-hor-center">
-        <div class="cardicon">
-          <a href="html/radio_schedule.html"><img src="img/Asset 3@4x.png" alt="/SCHOOL ALL NOOR/report.png" style="width: 60px;"></a>
-        </div>
-        <div class="cardtext">
-          <h3 style="font-weight: 900;"><a href="html/radio_schedule.html">جدول الإذاعات</a></h3>
-        </div>
-      </div>
-      <div class="cardbook6 scale-up-hor-center">
-        <div class="cardicon">
-          <a href="html/videosummaries.html"><img src="img/Asset 7@4x.png" alt="/SCHOOL ALL NOOR/request.png" style="width: 60px;"></a>
-        </div>
-        <div class="cardtext">
-          <h3 style="font-weight: 900;"><a href="html/videosummaries.html">فيديوهات تعليمية</a></h3>
-        </div>
-      </div>
-    </div>
-  </div>
-  <footer>
-    <h4> حقوق الطبع والنشر@ مدرسة النور -2024- محفوظة</h4>
-    <code><h3>DESIGN: RAFAT-SOFT</h3></code>
-  </footer>
-<script>
-    document.getElementById('alertLink').addEventListener('click', function(event) {
-        event.preventDefault();
-        const alertMessage = document.getElementById('alertMessage');
-        alertMessage.classList.add('show');
-    });
-
-    document.querySelector('.closeIcon').addEventListener('click', function() {
-        const alertMessage = document.getElementById('alertMessage');
-        alertMessage.classList.remove('show');
-    });
-</script>
   
+  <div class="text">
+    <p id="school" class="">موقع مدرسة النور التعليمية</p> 
+    منصة تعليمية متكاملة تقدم للطلاب خدمات تعليمية متنوعة. يوفر الموقع جدول الحصص والكتب المدرسية وجدول الاختبارات وجدول الإذاعات وملخصات ونماذج اختبارات للصف الثالث الثانوي والصف التاسع وأيضا فيديوهات تعليمية. بالإضافة إلى ذلك، يقدم الموقع موارد تعليمية لتعزيز مهارات الطلاب في اللغة الإنجليزية والرياضيات، وتقديم الدعم الأكاديمي اللازم.
+  </div>
+</div>
+<div class="scale-in-br">
+  <div class="card">
+    <div class="cardbook scale-up-hor-center">
+      <div class="cardicon">
+        <a href="html/classschedule.html"><img src="img/Asset 5@4x.png" alt="" style="width: 60px;"></a>
+      </div>
+      <div class="cardtext">
+        <h3 style="font-weight: 900;"><a href="html/classschedule.html">جدول الحصص</a></h3>
+      </div>
+    </div>
+    <div class="cardbook2 scale-up-hor-center">
+      <div class="cardicon">
+        <a href="html/pagebook.html"><img src="img/Asset 6@4x.png" alt=""></a>
+      </div>
+      <div class="cardtext">
+        <h3 style="font-weight: 900;"><a href="html/pagebook.html">الكتب المدرسية</a></h3>
+      </div>
+    </div>
+    <div class="cardbook3 scale-up-hor-center">
+      <div class="cardicon">
+        <a href=""><img src="img/Asset 8@4x.png" alt="/SCHOOL ALL NOOR/1775653.png" style="width: 60px;"></a>
+      </div>
+      <div class="cardtext">
+        <h3 style="font-weight: 900;"><a href="#">جدول الاختبارات</a></h3>
+      </div>
+    </div>
+    <div class="cardbook4 scale-up-hor-center">
+      <div class="cardicon">
+        <a href="html/summaries.html"><img src="img/Asset 4@4x.png" alt="/SCHOOL ALL NOOR/data-modelling.png" style="width: 80px; margin-left: 5%;"></a>
+      </div>
+      <div class="cardtext">
+        <h3 style="font-weight: 900;"><a href="html/summaries.html">نماذج وملخصات</a></h3>
+      </div>
+    </div>
+    <div class="cardbook5 scale-up-hor-center">
+      <div class="cardicon">
+        <a href="html/radio_schedule.html"><img src="img/Asset 3@4x.png" alt="/SCHOOL ALL NOOR/report.png" style="width: 60px;"></a>
+      </div>
+      <div class="cardtext">
+        <h3 style="font-weight: 900;"><a href="html/radio_schedule.html">جدول الإذاعات</a></h3>
+      </div>
+    </div>
+    <div class="cardbook6 scale-up-hor-center">
+      <div class="cardicon">
+        <a href="html/videosummaries.html"><img src="img/Asset 7@4x.png" alt="/SCHOOL ALL NOOR/request.png" style="width: 60px;"></a>
+      </div>
+      <div class="cardtext">
+        <h3 style="font-weight: 900;"><a href="html/videosummaries.html">فيديوهات تعليمية</a></h3>
+      </div>
+    </div>
+  </div>
+</div>
+<footer>
+  <h4> حقوق الطبع والنشر@ مدرسة النور -2024- محفوظة</h4>
+  <code><h3>DESIGN: RAFAT-SOFT</h3></code>
+</footer>
+<script>
+  function loadMessages() {
+    const messagesContainer = document.getElementById('messagesContainer');
+    messagesContainer.innerHTML = '';
+
+    let messages = JSON.parse(localStorage.getItem('messages')) || [];
+    messages.forEach((message, index) => {
+      const messageDiv = document.createElement('div');
+      messageDiv.classList.add('alertMessage');
+      messageDiv.innerHTML = `
+        <span class="closeIcon" onclick="deleteMessage(${index})">&times;</span>
+        <p>${message}</p>
+      `;
+      messagesContainer.appendChild(messageDiv);
+    });
+  }
+
+  function deleteMessage(index) {
+    let messages = JSON.parse(localStorage.getItem('messages')) || [];
+    messages.splice(index, 1);
+    localStorage.setItem('messages', JSON.stringify(messages));
+    loadMessages();
+  }
+
+  document.getElementById('alertLink').addEventListener('click', function(event) {
+    event.preventDefault();
+    const alertMessage = document.getElementById('alertMessage');
+    alertMessage.classList.add('show');
+    loadMessages();
+  });
+
+  document.querySelector('.closeIcon').addEventListener('click', function() {
+    const alertMessage = document.getElementById('alertMessage');
+    alertMessage.classList.remove('show');
+  });
+
+  // Load messages on initial load
+  window.onload = loadMessages;
+</script>
 </body>
 </html>
