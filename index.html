@@ -2,42 +2,64 @@
 <html lang="ar">
 <head>
   <meta charset="UTF-8"> 
-      <meta name="theme-color" content="#3EAE9E">
+  <meta name="theme-color" content="#3EAE9E">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="موقع مدرسة النور التعليمية - منصة تعليمية تقدم خدمات تعليمية متنوعة للطلاب">
   <title>مدرسة النور - منصة تعليمية</title>
   <link rel="icon" href="img/1715210863792.png">
-  
   <link rel="stylesheet" href="css/steelynew.css">
   <link rel="manifest" href="/manifest.json">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="../bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
- 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/css/splide.min.css">
-<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/js/splide.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/js/splide.min.js"></script>
+  <style>
+    .AlertMessages {
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 0s, opacity 0.5s linear;
+      background-color: #f44336;
+      color: white;
+      padding: 20px;
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 1000;
+      border-radius: 5px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    .AlertMessages.show {
+      visibility: visible;
+      opacity: 1;
+    }
+    .closeIcon {
+      cursor: pointer;
+      font-size: 20px;
+      float: right;
+    }
+  </style>
 </head>
 <body>
-
   <div class="AlertMessages" id="alertMessage">
-
-       <p>هذه رسالة تنبيه!</p>
-   <span class="closeIcon">&times;</span>
+    <p>هذه رسالة تنبيه!</p>
+    <span class="closeIcon">&times;</span>
   </div>
-
-<div class="contenet" style="background-image: url('img/background.png')">
-  <div class="messageicon" id="messageicon">
-        <h3> <img src="img/1715210863792.png" alt=""></h3>
-        <div class="massage" id="massage">
-          
-          <h3 class="iconmanue" style="margin-top: 30px;"> <a href="#" id="alertLink"><img src="img/icons8-message-48.png" alt="أيقونة الرسائل" style="width: 40px; margin-right: 10px; "></a></h3>
+  <div class="contenet" style="background-image: url('img/background.png')">
+    <div class="messageicon" id="messageicon">
+      <h3><img src="img/1715210863792.png" alt=""></h3>
+      <div class="massage" id="massage">
+        <h3 class="iconmanue" style="margin-top: 30px;">
+          <a href="#" id="alertLink">
+            <img src="img/icons8-message-48.png" alt="أيقونة الرسائل" style="width: 40px; margin-right: 10px;">
+          </a>
+        </h3>
+      </div>
+    </div>
+    <div class="text">
+      <p id="school" class="">موقع مدرسة النور التعليمية</p> 
+      منصة تعليمية متكاملة تقدم للطلاب خدمات تعليمية متنوعة. يوفر الموقع جدول الحصص والكتب المدرسية وجدول الاختبارات وجدول الإذاعات وملخصات ونماذج اختبارات للصف الثالث الثانوي والصف التاسع وأيضا فيديوهات تعليمية. بالإضافة إلى ذلك، يقدم الموقع موارد تعليمية لتعزيز مهارات الطلاب في اللغة الإنجليزية والرياضيات، وتقديم الدعم الأكاديمي اللازم
+    </div>
   </div>
-  </div>
-
-  <div class="text">
-    <p> <p id="school" class="">موقع مدرسة النور التعليمية </p> منصة تعليمية متكاملة تقدم للطلاب خدمات تعليمية متنوعة. يوفر الموقع جدول الحصص والكتب المدرسية وجدول الاختبارات وجدول الإذاعات وملخصات ونماذج اختبارات للصف الثالث الثانوي والصف التاسع وأيضا فيديوهات تعليمية. بالإضافة إلى ذلك، يقدم الموقع موارد تعليمية لتعزيز مهارات الطلاب في اللغة الإنجليزية والرياضيات، وتقديم الدعم الأكاديمي اللازم
-  </div>
-</div>
-
   <div class="scale-in-br">
     <div class="card">
       <div class="cardbook scale-up-hor-center">
@@ -59,59 +81,52 @@
       <div class="cardbook3 scale-up-hor-center">
         <div class="cardicon">
           <a href=""><img src="img/Asset 8@4x.png" alt="/SCHOOL ALL NOOR/1775653.png" style="width: 60px;"></a>
+        </div>
+        <div class="cardtext">
+          <h3 style="font-weight: 900;"><a href="#">جدول الاختبارات</a></h3>
+        </div>
       </div>
-      <div class="cardtext">
-         <h3 style="font-weight: 900;"><a href="#">جدول الاختبارات</a></h3>
+      <div class="cardbook4 scale-up-hor-center">
+        <div class="cardicon">
+          <a href="html/summaries.html"><img src="img/Asset 4@4x.png" alt="/SCHOOL ALL NOOR/data-modelling.png" style="width: 80px; margin-left: 5%;"></a>
+        </div>
+        <div class="cardtext">
+          <h3 style="font-weight: 900;"><a href="html/summaries.html">نماذج وملخصات</a></h3>
+        </div>
       </div>
-    </div>
-  <div class="cardbook4     scale-up-hor-center" >
-    <div class="cardicon      ">
-       <a href="html/summaries.html"><img src="img/Asset 4@4x.png" alt="/SCHOOL ALL NOOR/data-modelling.png" style="width: 80px; margin-left: 5%;" ></a>
-    </div>
-    <div class="cardtext">
-           <h3 style="font-weight: 900;"><a href="html/summaries.html">نماذج وملخصات</a></h3>
-    </div>
-  </div>
-      <div class="cardbook5     scale-up-hor-center">
-      <div class="cardicon">
+      <div class="cardbook5 scale-up-hor-center">
+        <div class="cardicon">
           <a href="html/radio_schedule.html"><img src="img/Asset 3@4x.png" alt="/SCHOOL ALL NOOR/report.png" style="width: 60px;"></a>
+        </div>
+        <div class="cardtext">
+          <h3 style="font-weight: 900;"><a href="html/radio_schedule.html">جدول الإذاعات</a></h3>
+        </div>
       </div>
-      <div class="cardtext">
-         <h3 style="font-weight: 900;"><a href="html/radio_schedule.html">جدول الإذاعات</a></h3>
+      <div class="cardbook6 scale-up-hor-center">
+        <div class="cardicon">
+          <a href="html/videosummaries.html"><img src="img/Asset 7@4x.png" alt="/SCHOOL ALL NOOR/request.png" style="width: 60px;"></a>
+        </div>
+        <div class="cardtext">
+          <h3 style="font-weight: 900;"><a href="html/videosummaries.html">فيديوهات تعليمية</a></h3>
+        </div>
       </div>
-    </div>
-  <div class="cardbook6     scale-up-hor-center" >
-    <div class="cardicon">
-       <a href="html/videosummaries.html"><img src="img/Asset 7@4x.png" alt="/SCHOOL ALL NOOR/request.png"  style="width: 60px;"></a>
-    </div>
-    <div class="cardtext">
-        <h3 style="font-weight: 900;"><a href="html/videosummaries.html">فيديوهات تعليمية</a></h3>
     </div>
   </div>
-</div>
-</div> 
-<footer>
-  <h4> حقوق الطبع والنشر@ مدرسة النور -2024- محفوظة</h4>
-  <code><h3>DESIGN: RAFAT-SOFT</h3></code>
-</footer>
-<!-- تم  مكتبه splie  -->
-
-<script>
+  <footer>
+    <h4> حقوق الطبع والنشر@ مدرسة النور -2024- محفوظة</h4>
+    <code><h3>DESIGN: RAFAT-SOFT</h3></code>
+  </footer>
+  <script>
     document.getElementById('alertLink').addEventListener('click', function(event) {
-        event.preventDefault();
-        const alertMessage = document.getElementById('alertMessage');
-        alertMessage.classList.add('show');
+      event.preventDefault();
+      const alertMessage = document.getElementById('alertMessage');
+      alertMessage.classList.add('show');
     });
 
     document.querySelector('.closeIcon').addEventListener('click', function() {
-        const alertMessage = document.getElementById('alertMessage');
-        alertMessage.classList.remove('show');
-        setTimeout(() => {
-            alertMessage.style.display = 'none';
-        }, 500); // تزامن مع مدة الـ transition
+      const alertMessage = document.getElementById('alertMessage');
+      alertMessage.classList.remove('show');
     });
-</script>
+  </script>
 </body>
-
 </html>
-
