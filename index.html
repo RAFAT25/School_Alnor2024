@@ -15,8 +15,8 @@
   <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/js/splide.min.js"></script>
   <style>
     .AlertMessages {
-      
-      
+      visibility: hidden;
+      opacity: 0;
       transition: visibility 0s, opacity 0.5s linear;
       background-color: #f44336;
       color: white;
@@ -40,22 +40,22 @@
   </style>
 </head>
 <body>
-
+<div class="AlertMessages" id="alertMessage">
+      <p>هذه رسالة تنبيه!</p>
+      <span class="closeIcon">&times;</span>
+</div>
   <div class="contenet" style="background-image: url('img/background.png')">
     <div class="messageicon" id="messageicon">
       <h3><img src="img/1715210863792.png" alt=""></h3>
       <div class="massage" id="massage">
         <h3 class="iconmanue" style="margin-top: 30px;">
           <a href="#" id="alertLink">
-            <img src="img/icons8-message-48.png" alt="أيقونة الرسائل" style="width: 40px; margin-right: 10px;">
+            <img src="img/icons8-message-48.png" alt="أيقونة الرسائل" style="width: 40px; margin-right: 10px;" >
           </a>
         </h3>
       </div>
     </div>
-      <div class="AlertMessages" id="alertMessage">
-    <p>هذه رسالة تنبيه!</p>
-    <span class="closeIcon">&times;</span>
-      </div>
+    
     <div class="text">
       <p id="school" class="">موقع مدرسة النور التعليمية</p> 
       منصة تعليمية متكاملة تقدم للطلاب خدمات تعليمية متنوعة. يوفر الموقع جدول الحصص والكتب المدرسية وجدول الاختبارات وجدول الإذاعات وملخصات ونماذج اختبارات للصف الثالث الثانوي والصف التاسع وأيضا فيديوهات تعليمية. بالإضافة إلى ذلك، يقدم الموقع موارد تعليمية لتعزيز مهارات الطلاب في اللغة الإنجليزية والرياضيات، وتقديم الدعم الأكاديمي اللازم
